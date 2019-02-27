@@ -39,6 +39,12 @@ const menuTemplate = [
 					createAddWindow();
 				}
 			},
+			{
+				label: 'Clear Tasks',
+				click() {
+					mainWindow.webContents.send('clearTasks');
+				}
+			},
 			{ 
 				label: 'Quit',
 				accelerator: process.platform === 'darwin' ? 'Command+q' : 'Ctrl+q',
